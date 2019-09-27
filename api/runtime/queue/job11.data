@@ -1,0 +1,1 @@
+O:33:"api\modules\v1\jobs\NewPaymentJob":4:{s:2:"id";i:11;s:3:"sum";d:456.83;s:10:"commission";d:0.92;s:12:"order_number";i:15;}

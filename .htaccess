@@ -1,0 +1,25 @@
+#Deny From All
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_URI} ^/api
+    RewriteRule ^api/(.*)$ api/web/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^/backend
+    RewriteRule ^backend/(.*)$ backend/web/$1 [L]
+
+
+#    RewriteCond %{REQUEST_URI} ^(.*)$
+#    RewriteRule ^(.*)$ frontend/web/$1 [L]
+</IfModule>
+
+# Deny accessing below extensions
+<Files ~ "(.json|.lock|.git|error_log)">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny accessing dot files
+RewriteRule (^\.|/\.) - [F]
