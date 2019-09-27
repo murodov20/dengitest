@@ -10,8 +10,8 @@ Minimum requirements:
 - Mysql 5.7
 
 ## Installation
-- Clone project
-- Install composer dependencies
+- Clone project: `git clone https://github.com/murodov20/dengitest.git`
+- Install composer dependencies: `composer install`
 - Configure apache2 configurations for backend & api entry points
 - Run `init`
 - Create new database and edit db config: `/common/config/main-local.php`
